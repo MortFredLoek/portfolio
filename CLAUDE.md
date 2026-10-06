@@ -14,6 +14,7 @@ Before any design or front-end work:
 2. Look at image, video and link blocks themselves, not only their titles.
 3. Treat blocks by their prefix (in the title or description):
    - `DO:` / `DON'T:` are hard rules.
+   - `STYLE:` is a reference for the overall look and feel.
    - `TYPE:`, `COLOUR:`, `MOTION:`, `LAYOUT:`, `CONTENT:` are references for that area.
    - Text blocks without a prefix are general principles.
    - Anything else is loose inspiration.
