@@ -24,3 +24,9 @@ Before any design or front-end work:
 
 - Plain HTML, CSS and JS, with no build step unless the channel asks for something that needs one.
 - Keep it fast and accessible: semantic HTML, alt text, `prefers-reduced-motion` for animations.
+
+## Tracking changes
+
+`arena-state.json` records the channel as it was at the last check (block id → `updated_at`).
+Writing "arena" means: compare the channel with this file, apply the changes, and update the file
+(see the shortcut in `~/.claude/CLAUDE.md`).
