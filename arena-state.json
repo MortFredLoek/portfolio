@@ -1,8 +1,23 @@
 {
   "channel": "portfolio-website-kx4azse_7a8",
-  "checked_at": "2026-10-06T15:55:00Z",
+  "checked_at": "2026-10-06T16:35:00Z",
   "blocks": {
-    "51112422": { "title": "Personal Info", "type": "Text", "updated_at": "2026-10-06T15:31:57Z" },
-    "51112710": { "title": "Work — UNCANNY", "type": "Link", "prefix": "LAYOUT:", "updated_at": "2026-10-06T15:46:50Z" }
+    "51112422": {
+      "title": "Personal Info",
+      "type": "Text",
+      "updated_at": "2026-10-06T15:31:57Z"
+    },
+    "51112710": {
+      "title": "Work — UNCANNY",
+      "type": "Link",
+      "prefix": "LAYOUT:",
+      "updated_at": "2026-10-06T15:46:50Z"
+    },
+    "51114246": {
+      "title": "TYPE: Times Dot Roman for all text",
+      "type": "Text",
+      "prefix": "TYPE:",
+      "updated_at": "2026-10-06T16:33:14Z"
+    }
   }
 }
