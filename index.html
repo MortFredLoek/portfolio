@@ -10,7 +10,7 @@
 <body>
   <h1 class="sr-only">Morten Fredslund Løkke</h1>
   <header class="intro">
-    <p>Morten Fredslund Løkke is an ambient designer and tech researcher based in Copenhagen, Denmark.</p>
+    <p>Morten Fredslund Løkke is an <button type="button" class="define" aria-controls="definition">ambient designer</button> and tech researcher based in Copenhagen, Denmark.</p>
   </header>
   <nav class="menu">
     <a href="work.html">Work</a>
@@ -19,14 +19,12 @@
   <section class="contact" id="contact" hidden>
     <p><a href="mailto:mfloekke@live.dk">mfloekke@live.dk</a></p>
   </section>
-  <script>
-    const toggle = document.querySelector('.menu button');
-    const contact = document.getElementById('contact');
-    toggle.addEventListener('click', () => {
-      const open = contact.hidden;
-      contact.hidden = !open;
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-  </script>
+  <p class="definition" id="definition" role="status" aria-live="polite">
+    An ambient designer shapes atmosphere rather than objects. Like light and sound in a room,
+    the work tints the physical and emotional climate of a space and lets the real world become
+    its material. It holds many levels of attention without demanding any one: as ignorable as it
+    is interesting, undemanding in form and open to paradox.
+  </p>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
