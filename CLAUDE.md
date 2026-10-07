@@ -31,3 +31,8 @@ Before any design or front-end work:
 `arena-state.json` records the channel as it was at the last check (block id → `updated_at`).
 Writing "arena" means: compare the channel with this file, apply the changes, and update the file
 (see the shortcut in `~/.claude/CLAUDE.md`).
+
+## Decisions
+
+- No clock on the site, even though the UNCANNY reference has one.
+- No section line between the intro and the work.
