@@ -36,3 +36,4 @@ Writing "arena" means: compare the channel with this file, apply the changes, an
 
 - No clock on the site, even though the UNCANNY reference has one.
 - No section line between the intro and the work.
+- No light/dark toggle: the site follows the visitor's system setting.
