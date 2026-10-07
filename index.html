@@ -5,99 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Morten Fredslund Løkke — Ambient Designer &amp; Tech Researcher</title>
 <meta name="description" content="Morten Fredslund Løkke is an ambient designer and tech researcher based in Copenhagen, Denmark.">
-<style>
-  @font-face {
-    font-family: "Times Dot Roman";
-    src: url("assets/fonts/times-dot-roman.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  :root {
-    --bg: #fcfcfc;
-    --fg: #111;
-    --muted: #666;
-    --gutter: 8px;
-    --image-width: 600px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #111; --fg: #eee; --muted: #999; }
-  }
-  * { box-sizing: border-box; }
-  html { background: var(--bg); color: var(--fg); }
-  body {
-    margin: 0;
-    padding: var(--gutter);
-    font: 16px/1.25 "Times Dot Roman", "Times New Roman", Times, serif;
-  }
-  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-  p { margin: 0; }
-
-  /* Intro */
-  .intro { max-width: 60em; }
-  hr {
-    border: 0;
-    border-top: 1px solid var(--fg);
-    margin: var(--gutter) 0;
-  }
-
-  /* Work list: facts left, tags right, images below */
-  .work { list-style: none; margin: 0; padding: 0; }
-  .project { margin-bottom: 3em; }
-  .project-head {
-    display: flex;
-    justify-content: space-between;
-    gap: 2em;
-  }
-  .project-facts p + p { margin-top: 0; }
-  .project-desc { margin-top: 1em; }
-  .project-tags { white-space: nowrap; }
-  .project-media { margin-top: 1em; }
-  .project-media img,
-  .project-media video {
-    display: block;
-    width: 100%;
-    max-width: var(--image-width);
-    height: auto;
-    margin-bottom: var(--gutter);
-  }
-  .empty { color: var(--muted); }
-
-  @media (max-width: 600px) {
-    .project-head { flex-direction: column; gap: 0.5em; }
-  }
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <header class="intro">
+  <h1 class="sr-only">Morten Fredslund Løkke</h1>
+  <nav class="menu">
+    <a href="work.html">Work</a>
+    <button type="button" aria-expanded="false" aria-controls="contact">Contact</button>
+  </nav>
+  <section class="contact" id="contact" hidden>
     <p>
-      Morten Fredslund Løkke is an ambient designer and tech researcher based in Copenhagen, Denmark.
-      Contact: <a href="mailto:mfloekke@live.dk">mfloekke@live.dk</a>.
+      Morten Fredslund Løkke is an ambient designer and tech researcher based in Copenhagen, Denmark.<br>
+      <a href="mailto:mfloekke@live.dk">mfloekke@live.dk</a>
     </p>
-  </header>
-
-  <hr>
-
-  <main>
-    <ol class="work">
-      <!--
-        Project template — copy for each project:
-        <li class="project">
-          <div class="project-head">
-            <div class="project-facts">
-              <p>Project title</p>
-              <p>Format, size</p>
-              <p class="project-desc">Short description.<br>In collaboration with …</p>
-            </div>
-            <p class="project-tags">[tags] <a href="#">Design</a> + <a href="#">Research</a></p>
-          </div>
-          <div class="project-media">
-            <img src="assets/…" alt="…">
-          </div>
-        </li>
-      -->
-      <li class="empty">Work coming soon.</li>
-    </ol>
-  </main>
+  </section>
+  <script>
+    const toggle = document.querySelector('.menu button');
+    const contact = document.getElementById('contact');
+    toggle.addEventListener('click', () => {
+      const open = contact.hidden;
+      contact.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  </script>
 </body>
 </html>
