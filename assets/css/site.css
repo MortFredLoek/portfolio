@@ -82,3 +82,12 @@ p { margin: 0; }
   text-align: right;
   background: var(--bg);
 }
+.definition .letter {
+  opacity: 0;
+  animation: letter-in 0.9s ease-in-out forwards;
+  animation-delay: calc(var(--i) * 35ms);
+}
+@keyframes letter-in { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .definition .letter { animation: none; opacity: 1; }
+}

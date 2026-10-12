@@ -1,11 +1,11 @@
 {
   "channel": "portfolio-website-kx4azse_7a8",
-  "checked_at": "2026-10-12T18:00:00Z",
+  "checked_at": "2026-10-12T18:30:00Z",
   "blocks": {
     "51112422": {
       "title": "Personal Info",
       "type": "Text",
-      "updated_at": "2026-10-06T15:31:57Z"
+      "updated_at": "2026-10-12T17:55:52Z"
     },
     "51112710": {
       "title": "Work — UNCANNY",
@@ -20,10 +20,10 @@
       "updated_at": "2026-10-06T16:33:14Z"
     },
     "51138591": {
-      "title": "Ambient designer definition + placement",
+      "title": "Ambient designer definition + placement + wave animation",
       "type": "Text",
       "prefix": "CONTENT:",
-      "updated_at": "2026-10-12T17:52:28Z"
+      "updated_at": "2026-10-12T17:58:07Z"
     },
     "51313892": {
       "title": "Project 1: Samovar Swell",
