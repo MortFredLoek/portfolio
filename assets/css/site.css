@@ -79,12 +79,11 @@ p { margin: 0; }
 }
 .definition {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(32em, calc(100vw - 32px));
+  right: var(--gutter);
+  bottom: var(--gutter);
+  width: min(24em, calc(100vw - 2 * var(--gutter)));
   margin: 0;
-  text-align: center;
+  text-align: right;
   background: var(--bg);
   opacity: 0;
   visibility: hidden;
