@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Times Dot Roman";
+  src: url("../fonts/times-dot-roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --bg: #fcfcfc;
+  --fg: #000;
+  --muted: #666;
+  --highlight: #3390ff;
+  --gutter: 8px;
+  --space: 6px;
+  --image-height: 40rem;
+  --glow: 1px 1px 1px #fcfcfc, 1px -1px 1px #fcfcfc, -1px 1px 1px #fcfcfc, -1px -1px 1px #fcfcfc;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #000; --fg: #fcfcfc; --muted: #999; }
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); color: var(--fg); }
+body {
+  margin: 0;
+  padding: var(--gutter);
+  font: 0.925rem/1rem "Times Dot Roman", "Times New Roman", Times, serif;
+  letter-spacing: -0.02em;
+}
+p { margin: 0; }
+
+/* Links and buttons: underlined, the text vanishes on hover, blue highlight on keyboard focus */
+a, .menu button {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+a:hover, .menu button:hover { color: transparent; }
+a:focus, .menu button:focus { outline: none; }
+a:focus-visible, .menu button:focus-visible,
+::selection {
+  background: var(--highlight);
+  color: #fcfcfc;
+  text-shadow: var(--glow);
+}
+
+/* Intro */
+.intro { max-width: 60em; margin-bottom: var(--space); }
+
+/* Work list: a hairline between projects (none above the first), facts left, tags right */
+.work { list-style: none; margin: 0; padding: var(--gutter) 0 0; }
+.project + .project {
+  margin-top: var(--gutter);
+  padding-top: var(--gutter);
+  border-top: 1px solid var(--fg);
+}
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--gutter);
+  max-width: 80rem;
+  margin-bottom: var(--gutter);
+}
+.project-desc { margin-top: var(--space); }
+.project-tags { white-space: nowrap; }
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+.project-media img,
+.project-media video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: var(--image-height);
+}
+.empty { color: var(--muted); }
+
+@media (min-width: 1024px) {
+  .project-head {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  }
+}
+
+/* Front page */
+.menu { display: flex; flex-direction: column; align-items: flex-start; }
+.menu button {
+  font: inherit; letter-spacing: inherit; background: none; border: 0; padding: 0;
+}
+.contact { margin-top: var(--space); max-width: 60em; }
+.contact[hidden] { display: none; }
+
+/* Work page */
+.back { display: inline-block; margin-top: var(--space); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* "Ambient designer" definition: always visible, fixed in the bottom right corner */
+.definition {
+  position: fixed;
+  right: var(--gutter);
+  bottom: var(--gutter);
+  width: min(24em, calc(100vw - 2 * var(--gutter)));
+  margin: 0;
+  line-height: 1;
+  text-align: right;
+  background: var(--bg);
+}
+.definition .letter {
+  opacity: 0;
+  animation: letter-in 0.9s ease-in-out forwards;
+  animation-delay: calc(var(--i) * 35ms);
+}
+@keyframes letter-in { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .definition .letter { animation: none; opacity: 1; }
+}

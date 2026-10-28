@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.root": "/site",
+  "editor.formatOnSave": false,
+  "files.exclude": {
+    "**/.DS_Store": true
+  }
+}
